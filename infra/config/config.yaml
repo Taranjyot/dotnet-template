@@ -1,0 +1,8 @@
+projectName: dotnet-template
+stackName: dev
+config:
+  aws:region: eu-west-2
+resources:
+  bucketObjectArgsOpts:
+    contentType: 'application/zip'
+    key: 'app.zip'

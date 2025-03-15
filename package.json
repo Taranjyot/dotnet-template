@@ -1,0 +1,25 @@
+{
+    "name": "@nd/dotnet-template",
+    "version": "1.0.0",
+    "description": "A dotnet template project",
+    "scripts": {
+        "pulumi:up": "ts-node ./infra/index.ts up ./infra/config/config.yaml",
+        "pulumi:destroy": "ts-node ./infra/index.ts destroy ./infra/config/config.yaml",
+        "test": "",
+        "build": "del build.zip && cd ./src && dotnet publish -c Release -r linux-x64 --self-contained -o ./publish"
+    },
+    "dependencies": {
+        "@pulumi/aws": "^6.72.0",
+        "@pulumi/pulumi": "^3.154.0",
+        "adm-zip": "^0.5.16",
+        "commander": "^13.1.0",
+        "js-yaml": "^4.1.0",
+        "pulumi": "^0.0.1",
+        "ts-node": "^10.9.2",
+        "yamljs": "^0.3.0"
+    },
+    "devDependencies": {
+        "@types/adm-zip": "^0.5.7",
+        "@types/yamljs": "^0.2.34"
+    }
+}
